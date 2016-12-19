@@ -17,3 +17,23 @@ def dfs(adjList, vertex, visited, parent):
 			return True
 
 	return False
+
+
+# Check if directed graph has cycle
+def hasCycle(self, adjList, vertex, visited):
+        
+    if visited[vertex] == 1:
+        return False
+    
+    if visited[vertex] == -1:
+        return True
+    
+    visited[vertex] = -1
+    
+    for i in self.getAdjList(adjList, vertex):
+        if self.hasCycle(adjList, i, visited):
+            return True
+    
+    visited[vertex] = 1
+    
+    return False
