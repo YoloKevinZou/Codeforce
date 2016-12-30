@@ -6,6 +6,7 @@ result = a+b*c
 
 result = max(result, a*(b+c))
 result = max(result, a*b*c)
-result = max(result, (a+b)*3)
+result = max(result, (a+b)*c)
+result = max(result, a+b+c)
 
 print result
